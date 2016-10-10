@@ -18,6 +18,9 @@ build:
   skip: True  # [not win or py2k]
 
 requirements:
+  build:
+    - python
+
   run:
     - python
 
