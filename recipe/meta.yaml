@@ -28,6 +28,7 @@ test:
 about:
   home: https://github.com/frerich/clcache
   license: BSD 3-Clause
+  license_file: LICENSE
   summary: 'a compiler cache for Microsoft Visual Studio'
 
   description: |
