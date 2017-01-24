@@ -19,6 +19,18 @@ If the script is called in an unsupported way (e.g. if the compiler is called fo
 the script will simply relay the invocation to the real 'cl.exe' program.
 
 
+Current build status
+====================
+
+Linux: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+OSX: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/clcache-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/clcache-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/clcache/badges/version.svg)](https://anaconda.org/conda-forge/clcache)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/clcache/badges/downloads.svg)](https://anaconda.org/conda-forge/clcache)
+
 Installing clcache
 ==================
 
@@ -39,7 +51,6 @@ It is possible to list all of the versions of `clcache` available on your platfo
 ```
 conda search clcache --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -75,18 +86,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
-OSX: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/clcache-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/clcache-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/clcache/badges/version.svg)](https://anaconda.org/conda-forge/clcache)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/clcache/badges/downloads.svg)](https://anaconda.org/conda-forge/clcache)
 
 
 Updating clcache-feedstock
