@@ -1,6 +1,6 @@
 {% set name = "clcache" %}
-{% set version = "3.3.0" %}
-{% set sha256 = "57659520283809b96035bc1a39678588df1143435e3b3467f1fe82d564d93ad4" %}
+{% set version = "4.0.0" %}
+{% set sha256 = "8232c5e5e55b7c8a685d6e21e1d94dd5c85e29abb2d04facb4c727810b4716cb" %}
 
 package:
   name: {{ name|lower }}
@@ -47,3 +47,5 @@ about:
 extra:
   recipe-maintainers:
     - edisongustavo
+    - tadeu
+    - nicoddemus
