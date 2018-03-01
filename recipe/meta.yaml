@@ -1,6 +1,6 @@
 {% set name = "clcache" %}
-{% set version = "4.0.0" %}
-{% set sha256 = "8232c5e5e55b7c8a685d6e21e1d94dd5c85e29abb2d04facb4c727810b4716cb" %}
+{% set version = "4.1.0" %}
+{% set sha256 = "b69097159103d7bfaad5526d844e91739ad53fa7d2998900c7060eab4162d03f" %}
 
 package:
   name: {{ name|lower }}
