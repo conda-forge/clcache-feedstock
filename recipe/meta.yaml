@@ -1,14 +1,13 @@
 {% set name = "clcache" %}
 {% set version = "4.2.0" %}
-{% set sha256 = "1bc030b52be969e6b533fdc6d8332e69438bab836b0e5562398aae94138b60a4" %}
+{% set sha256 = "41bcc460098463dfaf3b2b6c5f1db91548bb1d5f4243bed3bcbb9740a579246c" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: v{{ version }}.tar.gz
-  url: https://github.com/frerich/clcache/archive/v{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/c/clcache/clcache-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -16,13 +15,24 @@ build:
   entry_points:
     - clcache = clcache:main
   skip: True  # [not win or py2k]
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  entry_points:
+    - clcache = clcache.__main__:main
+    - clcache-server = clcache.server.__main__:main
 
 requirements:
   build:
+    - pip
     - python
+    - setuptools_scm
 
   run:
+    - pymemcache
     - python
+    - pyuv
+    - subprocess.run  # [py<35]
+    - typing  # [py<35]
+
 
 test:
   commands:
