@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1000
   entry_points:
     - clcache = clcache:main
   skip: True  # [not win or py2k]
