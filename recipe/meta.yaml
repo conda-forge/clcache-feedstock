@@ -19,12 +19,12 @@ build:
 
 requirements:
   host:
+    - python >=3.6
     - pip
-    - python
     - setuptools_scm
   run:
+    - python >=3.6
     - pymemcache
-    - python
     - pyuv
 
 test:
@@ -40,7 +40,7 @@ test:
 
 about:
   home: https://github.com/frerich/clcache
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE
   summary: 'a compiler cache for Microsoft Visual Studio'
 
