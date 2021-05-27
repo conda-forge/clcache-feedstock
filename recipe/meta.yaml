@@ -1,32 +1,42 @@
 {% set name = "clcache" %}
-{% set version = "4.1.0" %}
-{% set sha256 = "b69097159103d7bfaad5526d844e91739ad53fa7d2998900c7060eab4162d03f" %}
+{% set version = "4.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: v{{ version }}.tar.gz
   url: https://github.com/frerich/clcache/archive/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 1bc030b52be969e6b533fdc6d8332e69438bab836b0e5562398aae94138b60a4
 
 build:
-  number: 1003
+  number: 0
+  noarch: python
   entry_points:
-    - clcache = clcache:main
-  skip: True  # [not win or py2k]
+    - clcache = clcache.__main__:main
+    - clcache-server = clcache.server.__main__:main
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
+  host:
+    - pip
     - python
-
+    - setuptools_scm
   run:
+    - pymemcache
     - python
+    - pyuv
 
 test:
+  imports:
+    - clcache
+    - clcache.server
   commands:
+    - pip check
     - clcache --help
+    - clcache-server --help
+  requires:
+    - pip
 
 about:
   home: https://github.com/frerich/clcache
@@ -49,3 +59,4 @@ extra:
     - edisongustavo
     - tadeu
     - nicoddemus
+    - xhochy
